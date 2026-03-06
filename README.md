@@ -142,47 +142,9 @@ Este comando:
 * Para de rodar a aplicação
 
 
-# Vídeo demonstrativo do CRUD
-[![Vídeo de Demonstração da Sprint 2](https://img.youtube.com/vi/zdbPgIbVH-s/hqdefault.jpg)](https://youtu.be/zdbPgIbVH-s?si=DIloXwdbeYgNG8x4)
+# Vídeo mostando comandos antes da contanerização e depois no docker
+[![Vídeo de Demonstração](https://img.youtube.com/vi/LBQA38ktVek/hqdefault.jpg)](https://youtu.be/LBQA38ktVek?si=6meULpGIF0Ib51Qt)
 
-# Subindo arquivo de Java pra BackEnd
-
-## Deployments para subir Java na VM AZURE
-
-1. Entrar na sua VM (após colocar a senha)
-```bash
-ssh BackEnd@51.107.0.17
-```
-2. Atualizar pacotes
-```bash
-sudo apt update
-```
-3. Instalação do docker
-```bash
-sudo apt install git docker.io -y
-```
-4. Adicionar usuário ao grupo
-```bash
-sudo usermod -aG docker ${USER}
-```
-5. Clonando projeto
-```bash
-git clone https://github.com/AlexisRondo/mentalcheck-backend.git
-```
-6. Entrando no diretório do projeto
-```bash
-cd mentalcheck/
-```
-7. Compilar projeto e criar imagem Docker
-```bash
-docker build -t lumejava-api .
-```
-8. Rodar container
-```bash
-docker run -d -p 8080:8080 --name mentalcheck-backend --restart always mentalcheckjava-api
-```
-## Vídeo demonstrativo
-[![Vídeo de Demonstração da Sprint 2](https://img.youtube.com/vi/JyoUbbqZLTk/hqdefault.jpg)](https://youtu.be/JyoUbbqZLTk?si=CJScPbS657rdl9nO)
 
 
 
