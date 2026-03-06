@@ -145,8 +145,97 @@ Este comando:
 # Vídeo mostando comandos antes da contanerização e depois no docker
 [![Vídeo de Demonstração](https://img.youtube.com/vi/LBQA38ktVek/hqdefault.jpg)](https://youtu.be/LBQA38ktVek?si=6meULpGIF0Ib51Qt)
 
+## Estrutura do Pojeto
 
+```bash
+CP_DockerCompose
+│
+├── app.py
+├── requirements.txt
+├── Dockerfile
+└── docker-compose.yml
+```
 
+## Dockerfile
+
+O Dockerfile é responsável por cirar a imagem da aplicação
+
+Principais etapas:
+* definição da imagem base Python
+* instalaçõa das dependèncias
+* cópia da aplicação
+* execução da API
+
+## docker-compose.yml
+
+O Docker Compose define dois serviços:
+
+##dp
+
+Container do banco de dados MySQL
+
+##API
+
+Container da aplicação Flask
+
+Também são configurados:
+* rede interna
+* volume para persitência
+* healthcheck
+* variáveis de ambiente
+
+# Comandos Essenciais do Docker Compose
+
+Subir containers:
+```bash
+docker comppse up
+```
+Subir container em background:
+```bash
+docker compose up -d
+```
+Ver containers ativos:
+```bash
+docker ps
+```
+Parar containers:
+```bash
+docker compose down
+```
+Rebuild das imagens:
+```bash
+docker compose up --build
+```
+Ver logs:
+```bash
+docker compose logs
+```
+Ver logs de um container específico
+```bash
+docker compose logs api
+```
+
+# Troubleshooting (Problemas comuns)
+
+Erro: container já existe
+
+Erro:
+```bash
+Conflict. The container name is already in use
+```
+Solução:
+```bash
+docker rm -f nome_container
+```
+# Conclusão
+
+Com Docker Compose foi possível:
+* padronizar o ambiente
+* facilitar o deploy
+* separar aplicação e banco
+* garantir portabilidade
+
+A aplicação pode ser executada com apenas um comando, simplificando o processo de desenvolvimento e implantação.
 
 
    
